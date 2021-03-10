@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `The Random DevSecOps Guys Blogs`,
+    title: `Let's talk about sensibleDefaults`,
     menuLinks: [
       {
         name: `Home `,
