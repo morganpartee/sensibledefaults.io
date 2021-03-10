@@ -45,11 +45,9 @@ export const Layout = (props: Props) => {
         <HeaderTitle>
           <StyledLink to={`/`}>{title}</StyledLink>
         </HeaderTitle>
-        <HeaderTitle>
           {navLinks!.map(({name, link}) => {
             return <StyledLink to={link}>{name}</StyledLink>
           })}
-        </HeaderTitle>
       </header>
       <main>{children}</main>
       <footer>
