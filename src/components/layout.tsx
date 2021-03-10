@@ -11,8 +11,8 @@ interface Props extends PageRendererProps {
 }
 
 const StyledH1 = styled.h1`
-  ${styledScale(1.5)};
-  margin-bottom: ${rhythm(1.5)};
+  ${styledScale(1.4)};
+  margin-bottom: ${rhythm(.5)};
   margin-top: 0;
 `
 
@@ -23,31 +23,32 @@ const StyledH3 = styled.h3`
 
 const StyledLink = styled(FadeLink)`
   box-shadow: none;
-  color: aqua;
-  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  padding: ${`${rhythm(.2)} ${rhythm(.5)} ${rhythm(.2)} 0`};
 `
 
 const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(24)};
-  padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
+  padding: ${`${rhythm(1)} ${rhythm(3 / 4)}`};
 `
 
 export const Layout = (props: Props) => {
   const { location, navLinks, title, children } = props
-  
+
   const HeaderTitle = location.pathname === `/` ? StyledH1 : StyledH3
 
   return (
     <Content>
       <header>
         <HeaderTitle>
-          <StyledLink to={`/`} style={{color: "unset"}}>{title}</StyledLink>
+          <StyledLink to={`/`} style={{ color: "unset" }}>{title}</StyledLink>
         </HeaderTitle>
-          {navLinks!.map(({name, link}) => {
-            return <StyledLink to={link}>{name}</StyledLink>
-          })}
+        {navLinks!.map(({ name, link }) => {
+          return <StyledLink to={link}>{name}</StyledLink>
+        })}
       </header>
       <main>{children}</main>
       <footer>

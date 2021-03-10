@@ -13,7 +13,7 @@ import { rhythm } from "../utils/typography"
 
 const Content = styled.div`
   display: flex;
-  margin-bottom: ${rhythm(2.5)};
+  margin-bottom: ${rhythm(.5)};
 `
 
 const GatsbyImage = forwardRef(
@@ -54,16 +54,11 @@ export const Bio = () => {
 
   return (
     <Content>
-      <Avatar
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        imgStyle={{ borderRadius: "50%" }}
-      />
       <p>
-        Written by <strong>{author}</strong> who are just two guys who fell into software jobs, seemingly by accident
-        {` `}
+        Written by <strong>{author}</strong> - two guys who fell into software.
+        <br />
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow us on Twitter
+          You can follow the blog on Twitter.
         </a>
       </p>
     </Content>
