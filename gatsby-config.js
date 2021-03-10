@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `The Random DevSecOps Guys Blogs`,
     menuLinks: [
       {
         name: `Home `,

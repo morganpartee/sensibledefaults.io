@@ -49,7 +49,7 @@ export const Layout = (props: Props) => {
           <StyledLink to={`/`}>{title}</StyledLink>
         </HeaderTitle>
         <HeaderTitle>
-          {navLinks.map(({name, link}) => {
+          {navLinks!.map(({name, link}) => {
             return <StyledLink to={link}>{name}</StyledLink>
           })}
         </HeaderTitle>
