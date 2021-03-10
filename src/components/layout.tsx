@@ -23,7 +23,7 @@ const StyledH3 = styled.h3`
 
 const StyledLink = styled(FadeLink)`
   box-shadow: none;
-  color: inherit;
+  color: aqua;
   text-decoration: none;
 `
 
@@ -43,7 +43,7 @@ export const Layout = (props: Props) => {
     <Content>
       <header>
         <HeaderTitle>
-          <StyledLink to={`/`}>{title}</StyledLink>
+          <StyledLink to={`/`} style={{color: "unset"}}>{title}</StyledLink>
         </HeaderTitle>
           {navLinks!.map(({name, link}) => {
             return <StyledLink to={link}>{name}</StyledLink>
