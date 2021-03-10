@@ -1,12 +1,9 @@
-import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
+import { PageRendererProps } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
+import { NavLink } from "../types"
 import { rhythm, styledScale } from "../utils/typography"
 import { FadeLink } from "./link"
-type NavLink = {
-  name: string,
-  link: string
-}
 interface Props extends PageRendererProps {
   title: string
   children: ReactNode

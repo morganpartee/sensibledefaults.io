@@ -1,3 +1,5 @@
+import { NavLink } from "./types"
+
 export type Maybe<T> = T | null
 /** All built-in and custom scalars, mapped to their actual values */
 export interface Scalars {
@@ -2513,6 +2515,7 @@ export interface SiteSiteMetadata {
   author?: Maybe<Scalars["String"]>
   description?: Maybe<Scalars["String"]>
   siteUrl?: Maybe<Scalars["String"]>
+  menuLinks?: Maybe<NavLink[]>
   social?: Maybe<SiteSiteMetadataSocial>
 }
 

@@ -4,7 +4,10 @@ interface PageInput {
   layout?: string
   context?: any
 }
-
+export type NavLink = {
+  name: string,
+  link: string
+}
 interface BoundActionCreators {
   createPage: (page: PageInput) => void
   deletePage: (page: PageInput) => void
