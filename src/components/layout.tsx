@@ -1,12 +1,16 @@
-import { PageRendererProps } from "gatsby"
+import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { rhythm, styledScale } from "../utils/typography"
 import { FadeLink } from "./link"
-
+type NavLink = {
+  name: string,
+  link: string
+}
 interface Props extends PageRendererProps {
   title: string
   children: ReactNode
+  navLinks: NavLink[]
 }
 
 const StyledH1 = styled.h1`
@@ -34,16 +38,20 @@ const Content = styled.div`
 `
 
 export const Layout = (props: Props) => {
-  const { location, title, children } = props
-  const rootPath = `/`
-
-  const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3
+  const { location, navLinks, title, children } = props
+  
+  const HeaderTitle = location.pathname === `/` ? StyledH1 : StyledH3
 
   return (
     <Content>
       <header>
         <HeaderTitle>
           <StyledLink to={`/`}>{title}</StyledLink>
+        </HeaderTitle>
+        <HeaderTitle>
+          {navLinks.map(({name, link}) => {
+            return <StyledLink to={link}>{name}</StyledLink>
+          })}
         </HeaderTitle>
       </header>
       <main>{children}</main>

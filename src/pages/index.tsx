@@ -24,6 +24,10 @@ const BlogIndex = (props: Props) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -45,10 +49,11 @@ const BlogIndex = (props: Props) => {
   `)
 
   const siteTitle = data.site.siteMetadata.title
+  const navLinks = data.site.siteMetadata.menuLinks
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
