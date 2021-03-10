@@ -11,8 +11,8 @@ interface Props extends PageRendererProps {
 }
 
 const StyledH1 = styled.h1`
-  ${styledScale(1.4)};
-  margin-bottom: ${rhythm(.5)};
+  ${styledScale(1.3)};
+  margin-bottom: ${rhythm(.2)};
   margin-top: 0;
 `
 
@@ -23,7 +23,6 @@ const StyledH3 = styled.h3`
 
 const StyledLink = styled(FadeLink)`
   box-shadow: none;
-  color: black;
   font-weight: 900;
   padding: ${`${rhythm(.2)} ${rhythm(.5)} ${rhythm(.2)} 0`};
 `
