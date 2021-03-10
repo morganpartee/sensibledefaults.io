@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
-import { Layout } from "../components/layout"
+import { Layout } from "../../components/layout"
 
 type Props = PageRendererProps
 
-const ResourcesIndex = (props: Props) => {
+const AboutIndex = (props: Props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -23,9 +23,9 @@ const ResourcesIndex = (props: Props) => {
   const navLinks = data.site.siteMetadata.menuLinks
 
   return (
-    <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
-      Some Bullshit more here
+    <Layout location={props.location} title={siteTitle} navLinks={navLinks} >
+      Some Bullshit here
     </Layout>
   )
 }
-export default ResourcesIndex
+export default AboutIndex
