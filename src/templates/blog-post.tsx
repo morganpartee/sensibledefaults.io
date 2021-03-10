@@ -39,10 +39,11 @@ const BlogPostTemplate = (props: Props) => {
   const frontmatter = post.frontmatter!
   const html = post.html!
   const siteTitle = data.site!.siteMetadata!.title!
+  const navLinks = data.site!.siteMetadata!.menuLinks!
   const { previous, next } = props.pageContext
 
   return (
-    <Layout location={props.location} title={siteTitle} navLinks={data.site!.siteMetadata!.menuLinks!}>
+    <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
@@ -80,6 +81,10 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        menuLinks {
+          name
+          link
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
