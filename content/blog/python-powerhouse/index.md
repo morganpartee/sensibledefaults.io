@@ -1,6 +1,7 @@
 ---
 title: The Python Powerhouse Plan
 date: "2021-03-09T00:00:00.001Z"
+description: "Want to learn Python? Start here."
 ---
 
 Python is great. Tony doesn't love it, but I haven't seen a better way to teach folks programming without getting wrapped up in syntax. Here's my list of Python resources I like, for mostly free
