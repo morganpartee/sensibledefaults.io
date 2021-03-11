@@ -16,8 +16,12 @@ We still need to add a few slides on GraphQL (which this site uses!)
 
 [Requests-html](https://requests.readthedocs.io/projects/requests-html/en/latest/)
 
-[Working with JSON Data](https://towardsdatascience.com/query-apis-with-json-output-in-python-5e16182a9df)
-
 [Async Scraping Examples](https://github.com/morganpartee/python_code_examples/blob/master/async%20scraping.ipynb)
+
+[Curl to Python Converter](https://curl.trillworks.com/)
+
+[Intro to GraphQL](https://towardsdatascience.com/connecting-to-a-graphql-api-using-python-246dda927840)
+
+[Working with JSON Data](https://towardsdatascience.com/query-apis-with-json-output-in-python-5e16182a9df)
 
 [Intro to CSS selectors (DO THIS)](https://flukeout.github.io/)
