@@ -47,49 +47,49 @@ export const SEO = (props: Props) => {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={props.title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           content: metaDescription,
-          name: `description`,
+          name: `description`
         },
         {
           content: props.title,
-          property: `og:title`,
+          property: `og:title`
         },
         {
           content: metaDescription,
-          property: `og:description`,
+          property: `og:description`
         },
         {
           content: `website`,
-          property: `og:type`,
+          property: `og:type`
         },
         {
           content: `summary`,
-          name: `twitter:card`,
+          name: `twitter:card`
         },
         {
           content: site.siteMetadata.author,
-          name: `twitter:creator`,
+          name: `twitter:creator`
         },
         {
           content: props.title,
-          name: `twitter:title`,
+          name: `twitter:title`
         },
         {
           content: metaDescription,
-          name: `twitter:description`,
-        },
+          name: `twitter:description`
+        }
       ]
         .concat(
           keywords.length > 0
             ? {
                 content: keywords.join(`, `),
-                name: `keywords`,
+                name: `keywords`
               }
             : []
         )

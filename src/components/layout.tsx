@@ -12,7 +12,7 @@ interface Props extends PageRendererProps {
 
 const StyledH1 = styled.h1`
   ${styledScale(1.3)};
-  margin-bottom: ${rhythm(.2)};
+  margin-bottom: ${rhythm(0.2)};
   margin-top: 0;
 `
 
@@ -24,7 +24,7 @@ const StyledH3 = styled.h3`
 const StyledLink = styled(FadeLink)`
   box-shadow: none;
   font-weight: 900;
-  padding: ${`${rhythm(.2)} ${rhythm(.5)} ${rhythm(.2)} 0`};
+  padding: ${`${rhythm(0.2)} ${rhythm(0.5)} ${rhythm(0.2)} 0`};
 `
 
 const Content = styled.div`
@@ -43,7 +43,9 @@ export const Layout = (props: Props) => {
     <Content>
       <header>
         <HeaderTitle>
-          <StyledLink to={`/`} style={{ color: "unset" }}>{title}</StyledLink>
+          <StyledLink to={`/`} style={{ color: "unset" }}>
+            {title}
+          </StyledLink>
         </HeaderTitle>
         {navLinks!.map(({ name, link }) => {
           return <StyledLink to={link}>{name}</StyledLink>

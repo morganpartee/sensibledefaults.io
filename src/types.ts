@@ -5,7 +5,7 @@ interface PageInput {
   context?: any
 }
 export type NavLink = {
-  name: string,
+  name: string
   link: string
 }
 interface BoundActionCreators {

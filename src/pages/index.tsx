@@ -57,7 +57,14 @@ const BlogIndex = (props: Props) => {
     <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
       <SEO
         title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`, `DevSecOps`, `Python`]}
+        keywords={[
+          `blog`,
+          `gatsby`,
+          `javascript`,
+          `react`,
+          `DevSecOps`,
+          `Python`
+        ]}
       />
       <Bio />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
@@ -75,7 +82,7 @@ const BlogIndex = (props: Props) => {
             <small>{`${frontmatter.date} - ${frontmatter.postAuthor}`}</small>
             <p
               dangerouslySetInnerHTML={{
-                __html: frontmatter.description || excerpt,
+                __html: frontmatter.description || excerpt
               }}
             />
           </div>
