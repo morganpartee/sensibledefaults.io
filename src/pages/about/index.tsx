@@ -40,6 +40,8 @@ const AboutIndex = (props: Props) => {
         into this wonderful world like we did.
       </p>
       <b>- John</b>
+      <br/>
+      <br/>
       <p>
         John and I share a passion for learning. I give us more credit for our hard work than John does, but he's not entirely false. I took an open contract in the Air Force, meaning that they could have given me any job they wanted. Luckily enough I landed in Tech. The rest, well that's what this site is for. I want to share my experiences and learnings so that we can lend a hand to others who may find themselves in similar positions. Hopefully we impact a few career changes along the way! 
       </p>
