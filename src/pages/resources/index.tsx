@@ -24,7 +24,7 @@ const ResourcesIndex = (props: Props) => {
 
   return (
     <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
-      Some Bullshit more here
+      # TODO: Make this useful
     </Layout>
   )
 }

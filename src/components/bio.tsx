@@ -55,7 +55,7 @@ export const Bio = () => {
   return (
     <Content>
       <p>
-        Written by <strong>{author}</strong> - two guys who fell into software.
+      SensibleDefaults is mostly written by <strong>{author}</strong>, with frequent help from our friends.
         <br />
         <a href={`https://twitter.com/${social.twitter}`}>
           You can follow the blog on Twitter.

@@ -1,7 +1,8 @@
 ---
 title: Hello, World! I'm Anthony
 date: "2021-03-10T00:00:00.001Z"
-description: "Introduction"
+description: "Hi, I'm Tony, here's why I'm writing stuff."
+postAuthor: Tony
 ---
 Hello folks, I'm Anthony(Tony). Formally, I am the Director of Technologies and Innovation at CSEngineering. Informally, I am a Tech evangelist, nerd, geek, Dad, Husband, veteran, market speculator, and a whole lot of other things.  
 

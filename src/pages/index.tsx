@@ -41,6 +41,7 @@ const BlogIndex = (props: Props) => {
               date(formatString: "MMMM DD, YYYY")
               title
               description
+              postAuthor
             }
           }
         }
@@ -71,7 +72,7 @@ const BlogIndex = (props: Props) => {
             <Title>
               <StyledLink to={slug}>{title}</StyledLink>
             </Title>
-            <small>{frontmatter.date}</small>
+            <small>{`${frontmatter.date} - ${frontmatter.postAuthor}`}</small>
             <p
               dangerouslySetInnerHTML={{
                 __html: frontmatter.description || excerpt,

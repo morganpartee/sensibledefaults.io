@@ -16,7 +16,7 @@ module.exports = {
       }
     ],
     author: `John Partee and Anthony Butt`,
-    description: `A blog about 2 dudes who wound up in software jobs.`,
+    description: `A blog about two dudes who fell ass backwards into software.`,
     siteUrl: `https://sensibleDefaults.io/`,
     social: {
       twitter: `sensibleDef`

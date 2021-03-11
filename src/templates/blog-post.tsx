@@ -13,7 +13,7 @@ interface Props extends PageRendererProps {
   data: Query
 }
 
-const Date = styled.p`
+const MiniHeader = styled.p`
   display: block;
   ${styledScale(-1 / 5)};
   margin-bottom: ${rhythm(1)};
@@ -49,7 +49,7 @@ const BlogPostTemplate = (props: Props) => {
         description={frontmatter.description || excerpt}
       />
       <h1>{post.frontmatter!.title}</h1>
-      <Date>{frontmatter.date}</Date>
+      <MiniHeader>{frontmatter.date} - From {frontmatter.postAuthor}</MiniHeader>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Divider />
       <Bio />
@@ -95,6 +95,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        postAuthor
       }
     }
   }
