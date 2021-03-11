@@ -1,7 +1,7 @@
 ---
 title: Real Web Scraping (And how to avoid it)
 date: "2021-03-10T00:00:00.12Z"
-description: For whatever reason, I get paid money to scrape data pretty often. Here's how I do it, and how you can work faster by avoiding it.
+description: For whatever reason, I get paid money to scrape data pretty often. Here's how we do it, and how you can work faster by avoiding it.
 postAuthor: John with guest Andy Heroy!
 ---
 For whatever reason, I get paid money to scrape data pretty often. Here's how Andy and I handle it, and how you can work faster by avoiding it. There are code snippets included that cover how to scrape and how to scrape <b>really fast</b>. The GitHub links are included for convenience below. Linkedin, email, or tweet us with questions! Huge thanks to Andy for putting together the "API hunting" screenshots, and co-leading this lecture with me!
