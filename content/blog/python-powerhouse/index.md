@@ -17,7 +17,7 @@ This is gamified, and feels like Duolingo for code. The free version is fine.
 If you don’t like learning that way, skip on to one of these next two options:
 
 
-**Before moving on, pick a real IDE and get it set up right. You want a linter, a code formatter, and maybe Tab9/Sonarlint. Ask someone you trust for recommendations, and try them out. Don’t use Jupyter… You’ll see why! (I like VSCode, see here for my setup: [VSCode Baseline](https://docs.google.com/document/d/10YVNTiCJPjpzAVFTol9FY37drpUiFCqn0dwZZj_HvBY/edit?usp=sharing))**
+**Before moving on, pick a real IDE and get it set up right. You want a linter, a code formatter, and maybe Tab9/Sonarlint. Ask someone you trust for recommendations, and try them out. Don’t use Jupyter… You’ll see why! (I like VSCode, see here for my setup: [VSCode Sensible Defaults](/vscode-defaults))**
 
 If you prefer videos, go for this course: [Automate the Boring Stuff Videos](https://inventwithpython.com/automateudemy)
 
