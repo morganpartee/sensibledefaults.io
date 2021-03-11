@@ -49,7 +49,9 @@ const BlogPostTemplate = (props: Props) => {
         description={frontmatter.description || excerpt}
       />
       <h1>{post.frontmatter!.title}</h1>
-      <MiniHeader>{frontmatter.date} - From {frontmatter.postAuthor}</MiniHeader>
+      <MiniHeader>
+        {frontmatter.date} - From {frontmatter.postAuthor}
+      </MiniHeader>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Divider />
       <Bio />

@@ -11,7 +11,7 @@ interface Post {
 
 export const createPages: GatsbyCreatePages = async ({
   graphql,
-  boundActionCreators,
+  boundActionCreators
 }) => {
   const { createPage } = boundActionCreators
 
@@ -53,8 +53,8 @@ export const createPages: GatsbyCreatePages = async ({
       context: {
         next,
         previous,
-        slug: post.node.fields.slug,
-      },
+        slug: post.node.fields.slug
+      }
     })
   })
 

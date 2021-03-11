@@ -275,7 +275,7 @@ export enum DirectoryFieldsEnum {
   Atime = "atime",
   Mtime = "mtime",
   Ctime = "ctime",
-  Birthtime = "birthtime",
+  Birthtime = "birthtime"
 }
 
 export interface DirectoryFilterInput {
@@ -340,7 +340,7 @@ export interface DuotoneGradient {
 
 export enum ExcerptFormats {
   Plain = "PLAIN",
-  Html = "HTML",
+  Html = "HTML"
 }
 
 export type File = Node & {
@@ -588,7 +588,7 @@ export enum FileFieldsEnum {
   Mtime = "mtime",
   Ctime = "ctime",
   Birthtime = "birthtime",
-  PublicUrl = "publicURL",
+  PublicUrl = "publicURL"
 }
 
 export interface FileFilterInput {
@@ -663,7 +663,7 @@ export enum HeadingLevels {
   H3 = "h3",
   H4 = "h4",
   H5 = "h5",
-  H6 = "h6",
+  H6 = "h6"
 }
 
 export enum ImageCropFocus {
@@ -677,20 +677,20 @@ export enum ImageCropFocus {
   West = "WEST",
   Northwest = "NORTHWEST",
   Entropy = "ENTROPY",
-  Attention = "ATTENTION",
+  Attention = "ATTENTION"
 }
 
 export enum ImageFit {
   Cover = "COVER",
   Contain = "CONTAIN",
-  Fill = "FILL",
+  Fill = "FILL"
 }
 
 export enum ImageFormat {
   NoChange = "NO_CHANGE",
   Jpg = "JPG",
   Png = "PNG",
-  Webp = "WEBP",
+  Webp = "WEBP"
 }
 
 export type ImageSharp = Node & {
@@ -958,7 +958,7 @@ export enum ImageSharpFieldsEnum {
   ResizeWidth = "resize___width",
   ResizeHeight = "resize___height",
   ResizeAspectRatio = "resize___aspectRatio",
-  ResizeOriginalName = "resize___originalName",
+  ResizeOriginalName = "resize___originalName"
 }
 
 export interface ImageSharpFilterInput {
@@ -1359,7 +1359,7 @@ export enum MarkdownRemarkFieldsEnum {
   TableOfContents = "tableOfContents",
   WordCountParagraphs = "wordCount___paragraphs",
   WordCountSentences = "wordCount___sentences",
-  WordCountWords = "wordCount___words",
+  WordCountWords = "wordCount___words"
 }
 
 export interface MarkdownRemarkFieldsFilterInput {
@@ -1465,7 +1465,7 @@ export enum PotraceTurnPolicy {
   TurnpolicyLeft = "TURNPOLICY_LEFT",
   TurnpolicyRight = "TURNPOLICY_RIGHT",
   TurnpolicyMinority = "TURNPOLICY_MINORITY",
-  TurnpolicyMajority = "TURNPOLICY_MAJORITY",
+  TurnpolicyMajority = "TURNPOLICY_MAJORITY"
 }
 
 export interface Query {
@@ -1834,7 +1834,7 @@ export enum SiteFieldsEnum {
   Host = "host",
   PathPrefix = "pathPrefix",
   Polyfill = "polyfill",
-  BuildTime = "buildTime",
+  BuildTime = "buildTime"
 }
 
 export interface SiteFilterInput {
@@ -2142,7 +2142,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorPackageJsonPeerDependenciesVersion = "pluginCreator___packageJson___peerDependencies___version",
   PluginCreatorPackageJsonKeywords = "pluginCreator___packageJson___keywords",
   PluginCreatorId = "pluginCreatorId",
-  ComponentPath = "componentPath",
+  ComponentPath = "componentPath"
 }
 
 export interface SitePageFilterInput {
@@ -2346,7 +2346,7 @@ export enum SitePluginFieldsEnum {
   PackageJsonPeerDependencies = "packageJson___peerDependencies",
   PackageJsonPeerDependenciesName = "packageJson___peerDependencies___name",
   PackageJsonPeerDependenciesVersion = "packageJson___peerDependencies___version",
-  PackageJsonKeywords = "packageJson___keywords",
+  PackageJsonKeywords = "packageJson___keywords"
 }
 
 export interface SitePluginFilterInput {
@@ -2543,7 +2543,7 @@ export interface SiteSortInput {
 
 export enum SortOrderEnum {
   Asc = "ASC",
-  Desc = "DESC",
+  Desc = "DESC"
 }
 
 export interface StringQueryOperatorInput {
