@@ -1,6 +1,6 @@
 ---
 title: Hi I'm John.
-date: "2021-03-10T00:00:00.11Z"
+date: "2021-03-10T00:00:00.002Z"
 description: "Just a quick Bio for me."
 postAuthor: John
 ---
