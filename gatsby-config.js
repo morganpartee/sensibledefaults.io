@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/skilltrees`,
+        path: `${__dirname}/content/data/skilltrees`,
         name: `skilltrees`
       }
     },
