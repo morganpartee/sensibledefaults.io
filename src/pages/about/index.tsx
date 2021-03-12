@@ -1,29 +1,17 @@
 import React from "react"
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import { Layout } from "../../components/layout"
+import { useSiteMetadata } from "../../hooks/useSiteMetadata"
+import { SEO } from "../../components/seo"
 
 type Props = PageRendererProps
 
 const AboutIndex = (props: Props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-    }
-  `)
-
-  const siteTitle = data.site.siteMetadata.title
-  const navLinks = data.site.siteMetadata.menuLinks
+  const { title, menuLinks } = useSiteMetadata()
 
   return (
-    <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
+    <Layout location={props.location} title={title!} navLinks={menuLinks!}>
+      <SEO title={title!} />
       <br />
       <p># TODO: Make this blog useful {/* This stays lol */}</p>
       <p>I still can't believe I got this domain name.</p>

@@ -6,6 +6,8 @@ import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
 import { MarkdownRemark } from "../graphql-types"
+import { useAllMarkdownRemarkPosts } from "../hooks/useAllMarkdownRemark"
+import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { rhythm } from "../utils/typography"
 
 const StyledLink = styled(FadeLink)`
@@ -19,42 +21,11 @@ const Title = styled.h3`
 type Props = PageRendererProps
 
 const BlogIndex = (props: Props) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              description
-              postAuthor
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const siteTitle = data.site.siteMetadata.title
-  const navLinks = data.site.siteMetadata.menuLinks
-  const posts = data.allMarkdownRemark.edges
+  const posts = useAllMarkdownRemarkPosts()
+  const { title, menuLinks } = useSiteMetadata()
 
   return (
-    <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
+    <Layout location={props.location} title={title!} navLinks={menuLinks!}>
       <SEO
         title="All posts"
         keywords={[

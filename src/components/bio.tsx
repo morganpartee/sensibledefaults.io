@@ -9,6 +9,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import React, { ComponentProps, forwardRef, Ref } from "react"
 import styled from "styled-components"
+import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { rhythm } from "../utils/typography"
 
 const Content = styled.div`
@@ -30,6 +31,7 @@ const Avatar = styled(GatsbyImage)`
 `
 
 export const Bio = () => {
+  const { social, author } = useSiteMetadata()
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/sd-profile.png/" }) {
@@ -39,18 +41,8 @@ export const Bio = () => {
           }
         }
       }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-          }
-        }
-      }
     }
   `)
-
-  const { author, social } = data.site.siteMetadata
 
   return (
     <Content>
@@ -58,7 +50,7 @@ export const Bio = () => {
         SensibleDefaults is mostly written by <strong>{author}</strong>, with
         frequent help from our friends.
         <br />
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={`https://twitter.com/${social!.twitter}`}>
           You can follow the blog on Twitter.
         </a>
       </p>
