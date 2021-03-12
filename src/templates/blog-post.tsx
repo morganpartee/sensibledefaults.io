@@ -36,7 +36,7 @@ const BlogPostTemplate = (props: Props) => {
   const data = props.data!
   const post = data.markdownRemark!
   const excerpt = post.excerpt!
-  const frontmatter = post.frontmatter!
+  const { title, description, postAuthor, date } = post.frontmatter!
   const html = post.html!
   const siteTitle = data.site!.siteMetadata!.title!
   const navLinks = data.site!.siteMetadata!.menuLinks!
@@ -45,12 +45,12 @@ const BlogPostTemplate = (props: Props) => {
   return (
     <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
       <SEO
-        title={frontmatter.title!}
-        description={frontmatter.description || excerpt}
+        title={title!}
+        description={description || excerpt}
       />
-      <h1>{post.frontmatter!.title}</h1>
+      <h1>{title}</h1>
       <MiniHeader>
-        {frontmatter.date} - From {frontmatter.postAuthor}
+        {date} - From {postAuthor}
       </MiniHeader>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Divider />

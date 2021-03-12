@@ -6,7 +6,7 @@ import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 type Props = PageRendererProps
 
 const ResourcesIndex = (props: Props) => {
-  const {title, menuLinks} = useSiteMetadata()
+  const { title, menuLinks } = useSiteMetadata()
 
   return (
     <Layout location={props.location} title={title!} navLinks={menuLinks!}>
