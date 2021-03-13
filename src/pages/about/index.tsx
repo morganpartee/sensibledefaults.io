@@ -28,8 +28,8 @@ const AboutIndex = (props: Props) => {
         this wonderful world like we did.
       </p>
       <b>- John</b>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <p>
         John and I share a passion for learning. I give us more credit for our
         hard work than John does, but he's not entirely false. I took an open

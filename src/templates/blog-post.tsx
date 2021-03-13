@@ -44,10 +44,7 @@ const BlogPostTemplate = (props: Props) => {
 
   return (
     <Layout location={props.location} title={siteTitle} navLinks={navLinks}>
-      <SEO
-        title={title!}
-        description={description || excerpt}
-      />
+      <SEO title={title!} description={description || excerpt} />
       <h1>{title}</h1>
       <MiniHeader>
         {date} - From {postAuthor}

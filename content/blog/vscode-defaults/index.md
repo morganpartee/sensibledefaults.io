@@ -45,7 +45,7 @@ Toggle Zen Mode
 
 UNotes
 
-In your config file (Control+shift+p, open settings (JSON)), add these options to enable autosave, autolinting, and auto formatting for Python.
+In your config file (Control+shift+p, open settings (JSON)), add these options to enable autosave, auto linting, and auto formatting for Python.
 
 ```json
 "python.formatting.provider": "black",

@@ -29,7 +29,6 @@ export const SEO = (props: Props) => {
   const meta = props.meta || []
   const keywords = props.keywords || []
 
-
   const metaDescription = props.description || description
 
   return (
