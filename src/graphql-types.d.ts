@@ -1,4 +1,4 @@
-import { NavLink } from "./types"
+import { NavLink, RoadMapData } from "./types"
 
 export type Maybe<T> = T | null
 /** All built-in and custom scalars, mapped to their actual values */
@@ -1484,6 +1484,7 @@ export interface Query {
   allMarkdownRemark?: Maybe<MarkdownRemarkConnection>
   imageSharp?: Maybe<ImageSharp>
   allImageSharp?: Maybe<ImageSharpConnection>
+  skilltreesYaml?: Maybe<RoadMapData>
 }
 
 export interface QueryFileArgs {

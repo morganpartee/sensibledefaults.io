@@ -89,8 +89,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `SensibleDefaults.io`,
+        short_name: `SensibleDefaults`,
         start_url: `/`,
         background_color: `#eee`,
         theme_color: `#663399`,
@@ -109,6 +109,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
-    `gatsby-transformer-yaml`
+    `gatsby-transformer-yaml-plus`
   ]
 }

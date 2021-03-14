@@ -1,27 +1,30 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
+import CodeIcon from '@material-ui/icons/Code';
+import 'react-vertical-timeline-component/style.min.css';
+import { useHistory } from "react-router-dom";
 
 interface Props {
-  className: string;
-  iconStyle: { [key: string]: any };
-  icon: React.ReactNode;
-  header: string;
-  subHeader?: string;
+  iconStyle?: { [key: string]: any };
+  icon?: React.ReactNode;
+  title: string;
+  subTitle?: string;
   body: string;
-  id?: string;
+  link?: string;
 }
 
-export default function SkillTreeNode({ className, iconStyle, icon, header, subHeader, body, id }: Props) {
+export default function SkillTreeNode({ iconStyle, icon, title, subTitle, body, link }: Props) {
 
   return (
     <VerticalTimelineElement
-      className={className}
-      iconStyle={iconStyle}
-      icon={icon}
-      id={id}
-    >
-      <h3>{header}</h3>
-      {subHeader && <h4>{subHeader}</h4>}
+      contentStyle={{ background: '#eee', color: '#000', cursor: link && 'pointer' }}
+      contentArrowStyle={{ borderRight: '7px solid #ccc' }}
+      iconStyle={iconStyle || { background: '#eee', color: '#333' }}
+      className="vertical-timeline-element--work"
+      icon={icon || <CodeIcon />}
+      >
+      <h3 data-href={link}>{title}</h3>
+      {subTitle && <h4>{subTitle}</h4>}
       <p>{body}</p>
     </VerticalTimelineElement>
   )

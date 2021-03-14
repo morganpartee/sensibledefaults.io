@@ -1,20 +1,17 @@
 ---
 title: DevSecOps Skill Tree
+description: Thinking about a career in DevSecOps? Good call. Here's how we think you can start.
 stages:
-  - title: Learn python
-    body: some bullshit
+  - title: Learn Python
+    subtitle: Python is the right mix of easy and useful for most stuff.
+    body: Blah blah blah, see the powerhouse plan here.
+    link: "/python-powerhouse"
 
-  - title: Learn python
-    body: some bullshit
+  - title: Learn Containers
+    body: Give it another two years, containers will replace virtual machines (if Microsoft ever gets with it...)
 
-  - title: Learn python
-    body: some bullshit
+  - title: Learn an Orchestrator
+    body: Containers are cool, but you need a bunch of them to do anything cool. Figure out how!
 
-  - title: Learn python
-    body: some bullshit
-
-  - title: Learn python
-    body: some bullshit
-
-  - title: Make Money
-    body: some bullshit
+  - title: Learn how autoscaling works
+    body: I don't know man I'm getting bored slamming this out lol
