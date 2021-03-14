@@ -44,7 +44,7 @@ const SkillTreeTemplate = (props: Props) => {
 export default SkillTreeTemplate
 
 export const pageQuery = graphql`
-  query SkillTreestBySlug($slug: String!) {
+  query SkillTreesBySlug($slug: String!) {
     skilltreesYaml(fields: { slug: { eq: $slug } }) {
       description
       title
