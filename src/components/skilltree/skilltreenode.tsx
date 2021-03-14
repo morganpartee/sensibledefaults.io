@@ -2,8 +2,6 @@ import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import CodeIcon from '@material-ui/icons/Code';
 import 'react-vertical-timeline-component/style.min.css';
-import { useHistory } from "react-router-dom";
-
 interface Props {
   iconStyle?: { [key: string]: any };
   icon?: React.ReactNode;
