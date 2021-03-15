@@ -16,8 +16,8 @@ export default function SkillTreeNode({ iconStyle, icon, title, subTitle, body, 
   return (
     <VerticalTimelineElement
       contentStyle={{ background: '#eee', color: '#000' }}
-      contentArrowStyle={{ borderRight: '7px solid #ccc' }}
-      iconStyle={iconStyle || { background: '#eee', color: '#333' }}
+      contentArrowStyle={{ borderRight: '10px solid #ddd' }}
+      iconStyle={iconStyle || { background: '#fff', color: '#333', "box-shadow": "0 0 0 4px #aaa, inset 0 2px 0 rgba(0, 0, 0, 0.12), 0 3px 0 4px rgba(0, 0, 0, 0.08)" }}
       className="vertical-timeline-element--work"
       icon={icon || <CodeIcon />}
       >
