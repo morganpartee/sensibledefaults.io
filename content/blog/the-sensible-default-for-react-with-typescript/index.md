@@ -9,34 +9,34 @@ postAuthor: Tony
 &nbsp;   
 
 # Initialize your project | [**NPM Docs**](https://docs.npmjs.com/getting-started) | [**Yarn Docs**](https://classic.yarnpkg.com/en/docs/cli/)
-~~~
+~~~shell
 yarn init --yes
-
+~~~
 or
-
+~~~shell
 npm init --yes
 ~~~
 &nbsp;  
 &nbsp;  
 # Install Typescript | [**Docs**](https://www.typescriptlang.org/docs)
 
-```
+```shell
 yarn add typescript -D
-
+```
 or 
-
+```shell
 npm i typescript --save-dev
 ```
 
 ### Create a Typescript Config in the root Directory
-```
-Check for Typescript cli
+```shell
+#Check for Typescript cli
 tsc -v
 
-Generate the tsconfig.json
+#Generate the tsconfig.json
 tsc --init
 
-Install typescript globally if you don't have the cli installed
+#Install typescript globally if you don't have the cli installed
 npm i -g typescript
 ```
 #### *./tsconfig.json*
@@ -78,18 +78,18 @@ npm i -g typescript
 # React Setup | [**Docs**](https://reactjs.org/docs/getting-started.html)
 
 ### Add Dependencies
-```
+```shell
 yarn add react react-dom
 yarn add @types/react @types/react-dom -D
-
+```
 or
-
+```shell
 npm i react react-dom --save
 npm i @types/react @types/react-dom --save-dev
 ```
 
 ### Create the inital App files in your project's root directory
-```
+```shell
 mkdir -p public src/components/HelloWorld
 touch public/index.html  src/{index.tsx,App.tsx} src/components/HelloWorld/index.tsx 
 
@@ -146,20 +146,20 @@ export default HelloWorld;
 # Add Webpack | [**Docs**](https://webpack.js.org/configuration/)
 
 ### Add dependencies
-```
+```shell
 yarn add webpack webpack-cli webpack-dev-server ts-node @types/node @types/webpack @types/webpack-dev-server tsconfig-paths-webpack-plugin -D
 ```
 or
-```
+```shell
 npm i webpack webpack-cli webpack-dev-server ts-node @types/node @types/webpack @types/webpack-dev-server tsconfig-paths-webpack-plugin --save-dev
 ```
 *We can run type checking through webpack(thanks to the nice [fork-ts-checker-webpack-plugin](https://www.npmjs.com/package/fork-ts-checker-webpack-plugin)*
 
-```
+```shell
 yarn add ts-loader fork-ts-checker-webpack-plugin html-webpack-plugin -D
 ```
 or
-```
+```shell
 npm i ts-loader fork-ts-checker-webpack-plugin html-webpack-plugin --save-dev
 ```
 
@@ -231,11 +231,11 @@ export default webpackConfig;
 &nbsp;  
 # Adding Prettier | [**Docs**](https://prettier.io/docs/en/options.html)
 ### Install dependencies
-```
+```shell
 yarn add prettier -D
 ```
 *or*
-```
+```shell
 npm i prettier --save-dev
 ```
 ### Configure .prettierrc
@@ -258,16 +258,16 @@ npm i prettier --save-dev
   "htmlWhitespaceSensitivity": "css"
 }
 ```
-*I reccommend configuring your IDE to run Prettier on each save. See docs: [https://prettier.io/docs/en/editors.html](https://prettier.io/docs/en/editors.html)*  
+*I recommend configuring your IDE to run Prettier on each save. See docs: [https://prettier.io/docs/en/editors.html](https://prettier.io/docs/en/editors.html)*  
 &nbsp;  
 &nbsp;  
 # Add ESLint | [**Docs**](https://eslint.org/docs/rules/)
 ### Install dependencies
-```
+```shell
 yarn add eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prettier eslint-config-prettier eslint-plugin-import -D
 ```
 or
-```
+```shell
 npm i eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prettier eslint-config-prettier eslint-plugin-import --save-dev
 ```
 ### Create .eslintrc.json file in the root directory
@@ -325,25 +325,29 @@ npm i eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/es
 }
 ```
 ### Create .eslintignore file and add webpack config file to it
-`touch .eslintignore`
-#### *./.eslintignore*
+```shell
+touch .eslintignore
 ```
+#### *./.eslintignore*
+```shell
 webpack.config.ts
 ```
 &nbsp;  
 &nbsp;  
 # Add Jest and React Testing library for testing purposes | [**Docs**](https://jestjs.io/docs/en/configuration)
 ### Install dependencies
-```
+```shell
 yarn add -D @types/jest @testing-library/react @testing-library/jest-dom jest ts-jest 
 ```
 or
-```
+```shell
 npm i @types/jest @testing-library/react @testing-library/jest-dom jest ts-jest --save-dev
 ```
 
 ### Create jest.config.js in the root directory and configure Jest/React Testing Library
-`touch jest.config.js`
+```shell
+touch jest.config.js
+```
 
 #### *jest.config.js*
 
@@ -388,13 +392,15 @@ module.exports = {
 }
 ```
 ### To guarantee the Jest matchers are available for all test files whenever the developers put them create a globals.d.ts in the src directory
-`touch src/globals.d.ts`
+```shell
+touch src/globals.d.ts
+```
 #### *src/globals.d.ts*
 ```javascript
 import "@testing-library/jest-dom/extend-expect";
 ```
 ### Setup test directory
-```
+```shell
 mkdir src/__tests__
 touch src/__tests__/App.test.tsx
 ```
@@ -458,11 +464,12 @@ CMD [ "nginx", "-g", "daemon off;" ]
 ```
 .git
 node_modules
-
 ```
 
 # Create Docker-compose yaml for easy development | [**Docs**](https://docs.docker.com/compose/)
-`touch docker-compose.yml`
+```shell
+touch docker-compose.yml
+```
 #### ./docker-compose.yml
 ```yaml
 version: "3"
