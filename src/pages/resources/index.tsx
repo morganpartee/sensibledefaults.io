@@ -20,7 +20,7 @@ const Title = styled.h3`
   margin-bottom: ${rhythm(1 / 4)};
 `
 
-const BlogIndex = (props: Props) => {
+const ResourcesIndex = (props: Props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -50,7 +50,7 @@ const BlogIndex = (props: Props) => {
       }
     }
   `)
-
+  const ResourcesIndex = (props: Props) => {
   const posts = data.allMarkdownRemark.edges
   const {title, menuLinks} = useSiteMetadata()
   
@@ -95,4 +95,4 @@ const BlogIndex = (props: Props) => {
   )
 }
 
-export default BlogIndex
+export default ResourcesIndex
