@@ -50,7 +50,6 @@ const ResourcesIndex = (props: Props) => {
       }
     }
   `)
-  const ResourcesIndex = (props: Props) => {
   const posts = data.allMarkdownRemark.edges
   const {title, menuLinks} = useSiteMetadata()
   
