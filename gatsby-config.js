@@ -13,6 +13,10 @@ module.exports = {
       {
         name: `Resources`,
         link: `/resources`
+      },
+      {
+        name: `Skill Trees`,
+        link: `/skilltrees`
       }
     ],
     author: `John Partee and Anthony Butt`,
@@ -26,8 +30,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/data/skilltrees`,
+        name: `skilltrees`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/blog`,
         name: `blog`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/resources`,
+        name: `resources`
       }
     },
     {
@@ -71,8 +89,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `SensibleDefaults.io`,
+        short_name: `SensibleDefaults`,
         start_url: `/`,
         background_color: `#eee`,
         theme_color: `#663399`,
@@ -90,6 +108,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    `gatsby-transformer-yaml-plus`
   ]
 }
