@@ -1,4 +1,4 @@
-import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
+import { PageRendererProps } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { Bio } from "../components/bio"

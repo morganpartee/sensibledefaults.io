@@ -14,6 +14,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+
+  if (node.internal.type === `SkilltreesYaml`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }
 
 exports.createPages = require("./src/lib/createPages").createPages

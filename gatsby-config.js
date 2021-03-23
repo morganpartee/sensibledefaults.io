@@ -13,7 +13,11 @@ module.exports = {
       {
         name: `Resources`,
         link: `/resources`
-      }
+      },
+      // {
+      //   name: `Skill Trees`,
+      //   link: `/skilltrees`
+      // }
     ],
     author: `John Partee and Anthony Butt`,
     description: `A Sensible Default is a practice, language, framework or tool adopted as the default choice for an engineering team. It's the commonly agreed approach to building products, and the first thing to consider when starting a new project, or when there's a new problem to solve.`,
@@ -26,8 +30,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/data/skilltrees`,
+        name: `skilltrees`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/blog`,
         name: `blog`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/resources`,
+        name: `resources`
       }
     },
     {
@@ -41,21 +59,22 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590
-            }
-          },
+          `gatsby-remark-code-buttons`,
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`
             }
           },
+          `gatsby-remark-smartypants`,
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590
+            }
+          },
         ]
       }
     },
@@ -71,8 +90,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `SensibleDefaults.io`,
+        short_name: `SensibleDefaults`,
         start_url: `/`,
         background_color: `#eee`,
         theme_color: `#663399`,
@@ -90,6 +109,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    `gatsby-transformer-yaml-plus`
   ]
 }

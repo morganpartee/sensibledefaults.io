@@ -6,8 +6,8 @@ import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import { Bio } from "../../components/bio"
 import { FadeLink } from "../../components/link"
 import { SEO } from "../../components/seo"
-import { MarkdownRemark } from "../../graphql-types"
 import { rhythm } from "../../utils/typography"
+import { RoadMapData } from "../../types"
 
 
 type Props = PageRendererProps
@@ -20,37 +20,24 @@ const Title = styled.h3`
   margin-bottom: ${rhythm(1 / 4)};
 `
 
-const ResourcesIndex = (props: Props) => {
+const SkillTreeIndex = (props: Props) => {
   const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-      allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fileAbsolutePath: {regex: "/resources/"}}) {
-        edges {
-          node {
-            excerpt
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              description
-              postAuthor
-            }
-          }
+  query{
+  allSkilltreesYaml {
+    edges {
+      node {
+        title
+        description
+        fields {
+          slug
         }
       }
     }
+  }
+}
   `)
-  const posts = data.allMarkdownRemark.edges
+
+  const posts = data.allSkilltreesYaml.edges
   const {title, menuLinks} = useSiteMetadata()
   
   return (
@@ -67,23 +54,21 @@ const ResourcesIndex = (props: Props) => {
         ]}
       />
       <br/>
-      <p>Here are a few hand-picked things that we wanted to set aside as resources. These are usually more lists of things we like, and less opinion.</p>
-      {posts.map(({ node }: { node: MarkdownRemark }) => {
-        const frontmatter = node!.frontmatter!
+      <p>When we got started in software there wasn't much of a roadmap. We're trying to help with some sensible defaults to get you learning.</p>
+      {posts.map(({ node }: { node: RoadMapData }) => {
         const fields = node!.fields!
         const slug = fields.slug!
-        const excerpt = node!.excerpt!
+        const excerpt = node!.description!
 
-        const postTitle = frontmatter.title || fields.slug
+        const postTitle = node.title || fields.slug
         return (
           <div key={slug}>
             <Title>
               <StyledLink to={slug}>{postTitle}</StyledLink>
             </Title>
-            <small>{`${frontmatter.date} - ${frontmatter.postAuthor}`}</small>
             <p
               dangerouslySetInnerHTML={{
-                __html: frontmatter.description || excerpt
+                __html: excerpt
               }}
             />
           </div>
@@ -94,4 +79,4 @@ const ResourcesIndex = (props: Props) => {
   )
 }
 
-export default ResourcesIndex
+export default SkillTreeIndex

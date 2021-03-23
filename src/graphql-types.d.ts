@@ -1,4 +1,4 @@
-import { NavLink } from "./types"
+import { NavLink, RoadMapData } from "./types"
 
 export type Maybe<T> = T | null
 /** All built-in and custom scalars, mapped to their actual values */
@@ -1386,10 +1386,11 @@ export interface MarkdownRemarkFilterInput {
 }
 
 export interface MarkdownRemarkFrontmatter {
-  title?: Maybe<Scalars["String"]>
-  date?: Maybe<Scalars["Date"]>
+  title: Maybe<Scalars["String"]>
+  date: Maybe<Scalars["Date"]>
   description?: Maybe<Scalars["String"]>
   postAuthor?: Maybe<Scalars["String"]>
+  section?: Maybe<Scalars["String"]>
 }
 
 export interface MarkdownRemarkFrontmatterDateArgs {
@@ -1483,6 +1484,7 @@ export interface Query {
   allMarkdownRemark?: Maybe<MarkdownRemarkConnection>
   imageSharp?: Maybe<ImageSharp>
   allImageSharp?: Maybe<ImageSharpConnection>
+  skilltreesYaml?: Maybe<RoadMapData>
 }
 
 export interface QueryFileArgs {
