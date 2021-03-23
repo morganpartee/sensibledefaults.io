@@ -14,10 +14,10 @@ module.exports = {
         name: `Resources`,
         link: `/resources`
       },
-      {
-        name: `Skill Trees`,
-        link: `/skilltrees`
-      }
+      // {
+      //   name: `Skill Trees`,
+      //   link: `/skilltrees`
+      // }
     ],
     author: `John Partee and Anthony Butt`,
     description: `A Sensible Default is a practice, language, framework or tool adopted as the default choice for an engineering team. It's the commonly agreed approach to building products, and the first thing to consider when starting a new project, or when there's a new problem to solve.`,
