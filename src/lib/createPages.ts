@@ -15,7 +15,7 @@ export const createPages: GatsbyCreatePages = async ({
 }) => {
   const { createPage } = boundActionCreators
 
-  const allMarkdown = await graphql(`
+  const data = await graphql(`
     {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
@@ -32,15 +32,26 @@ export const createPages: GatsbyCreatePages = async ({
           }
         }
       }
+      allSkilltreesYaml {
+        edges {
+          node {
+            title
+            description
+            fields {
+              slug
+            }
+          }
+        }
+      }
     }
   `)
 
-  if (allMarkdown.errors) {
-    throw allMarkdown.errors
+  if (data.errors) {
+    throw data.errors
   }
 
   // Create blog posts pages.
-  const posts = allMarkdown.data.allMarkdownRemark.edges
+  const posts = data.data.allMarkdownRemark.edges
 
   posts.forEach((post: Post, index: number) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -53,6 +64,20 @@ export const createPages: GatsbyCreatePages = async ({
       context: {
         next,
         previous,
+        slug: post.node.fields.slug
+      }
+    })
+  })
+
+  // Create skill tree pages.
+  const skillTrees = data.data.allSkilltreesYaml.edges
+
+  skillTrees.forEach((post: Post) => {
+    createPage({
+      path: post.node.fields.slug,
+      // tslint:disable-next-line:object-literal-sort-keys
+      component: path.resolve(`./src/templates/skilltree/skill-tree.tsx`),
+      context: {
         slug: post.node.fields.slug
       }
     })
