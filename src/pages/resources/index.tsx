@@ -66,7 +66,7 @@ const ResourcesIndex = (props: Props) => {
           `Python`
         ]}
       />
-      <br/>
+      <h2>Resource Posts</h2>
       <p>Here are a few hand-picked things that we wanted to set aside as resources. These are usually more lists of things we like, and less opinion.</p>
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
