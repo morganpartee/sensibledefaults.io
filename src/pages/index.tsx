@@ -37,7 +37,7 @@ const BlogIndex = (props: Props) => {
           `Python`
         ]}
       />
-      <Bio />
+      <h2>Latest Posts</h2>
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
         const fields = node!.fields!
@@ -59,6 +59,7 @@ const BlogIndex = (props: Props) => {
           </div>
         )
       })}
+      <Bio />
     </Layout>
   )
 }
