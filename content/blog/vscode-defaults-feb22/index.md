@@ -1,5 +1,5 @@
 ---
-title: VSCode Sensible Defaults
+title: VSCode Sensible Defaults (Update!)
 date: "2022-02-03T00:00:00.50Z"
 description: 2022 is somehow here already, and I still love VSCode. Here's what I use now!
 postAuthor: John
