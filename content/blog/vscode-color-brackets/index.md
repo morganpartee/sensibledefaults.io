@@ -20,4 +20,4 @@ While you're in there, add autosaving too. It's handy.
 ```json
 "files.autoSave": "afterDelay",
 "files.autoSaveDelay": 10000,
-```  
+```
