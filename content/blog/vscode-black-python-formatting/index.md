@@ -12,16 +12,17 @@ In VSCode, open your settings.json (Control+Shift+P, enter 'open settings json',
   "editor.formatOnSave": true,
 ```
 
+
 Find this useful? I have more VSCode sensible defaults [here](/vscode-defaults-feb22)
 
 This is a part of a series of quick defaults to make your life easier, based on how we show up in search results.
 
 While you're in there, add autosaving and auto linting too. It's handy.
+
 ```json
 
   "python.linting.enabled": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10000,
   "python.linting.lintOnSave": true
-```
 ```
