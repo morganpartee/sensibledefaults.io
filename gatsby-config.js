@@ -13,7 +13,7 @@ module.exports = {
       {
         name: `Resources`,
         link: `/resources`
-      },
+      }
       // {
       //   name: `Skill Trees`,
       //   link: `/skilltrees`
@@ -59,7 +59,10 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-code-buttons`,
+          {
+            resolve: `gatsby-remark-code-buttons`,
+            options: {}
+          },
           `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -74,7 +77,7 @@ module.exports = {
             options: {
               maxWidth: 590
             }
-          },
+          }
         ]
       }
     },

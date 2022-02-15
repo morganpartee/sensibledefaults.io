@@ -8,15 +8,22 @@ postAuthor: John
 In VSCode, open your settings.json (Control+Shift+P, enter 'open settings json', hit enter), and paste this in to enable black formatting on save.
 
 ```json
+
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
 ```
 
+<br>
 Make sure you have it installed too.
+<br>
+<br>
 
 ```
+# From the command line:
 pip install black
 ```
+
+<br>
 
 Find this useful? I have more VSCode sensible defaults [here](/vscode-defaults-feb22)
 
@@ -24,12 +31,14 @@ This is a part of a series of quick defaults to make your life easier, based on 
 
 While you're in there, add autosaving and auto linting too. It's handy.
 
-```json
+```py
 
   "python.linting.enabled": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10000,
   "python.linting.lintOnSave": true
 ```
+
+<br>
 
 Happy coding!
