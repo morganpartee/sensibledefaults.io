@@ -1,7 +1,7 @@
 ---
 title: VSCode Python Formatting with Black
 date: "2022-02-14T00:00:00.50Z"
-description: Paste this into your settings.json and you're set.
+description: Paste this into your settings json and you'll automatically have prettier code.
 postAuthor: John
 ---
 

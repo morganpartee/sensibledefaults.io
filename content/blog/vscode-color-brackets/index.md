@@ -1,7 +1,7 @@
 ---
 title: VSCode Colorized Bracket Pairs
 date: "2022-02-14T00:00:00.50Z"
-description: Paste this into your settings.json and you're set.
+description: Paste this into your settings.json to see your bracket pairs easier!
 postAuthor: John
 ---
 
