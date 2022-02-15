@@ -12,6 +12,11 @@ In VSCode, open your settings.json (Control+Shift+P, enter 'open settings json',
   "editor.formatOnSave": true,
 ```
 
+Make sure you have it installed too.
+
+```
+pip install black
+```
 
 Find this useful? I have more VSCode sensible defaults [here](/vscode-defaults-feb22)
 
@@ -26,3 +31,5 @@ While you're in there, add autosaving and auto linting too. It's handy.
   "files.autoSaveDelay": 10000,
   "python.linting.lintOnSave": true
 ```
+
+Happy coding!
