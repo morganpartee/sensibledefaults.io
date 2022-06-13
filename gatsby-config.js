@@ -118,6 +118,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
-    `gatsby-transformer-yaml-plus`
+    `gatsby-transformer-yaml-plus`,
+    `gatsby-plugin-sitemap`
   ]
 }
