@@ -39,7 +39,7 @@ The board spans the middle of a 9x10 grid, the right column existing just to get
 
 ### Chess Game
 
-Here is where it gets weird. I used [chess.js] to load the puzzle positions, and track moves. chess.js uses update methods to change the game, which doesn't play great with React. `react-chessboard` solves that problem with a `safeGameMutate` function, which I used:
+Here is where it gets weird. I used [chess.js](https://github.com/jhlywa/chess.js/blob/master/README.md) to load the puzzle positions, and track moves. chess.js uses update methods to change the game, which doesn't play great with React. `react-chessboard` solves that problem with a `safeGameMutate` function, which I used:
 
 ```js
   function safeGameMutate(modify: (x: ChessInstance) => void) {
