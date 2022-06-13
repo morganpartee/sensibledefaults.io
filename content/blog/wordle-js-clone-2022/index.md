@@ -13,7 +13,7 @@ I'm an okay chess player and React developer, and I wanted to combine the two wi
 
 How could we take chess "tactical" puzzles, and turn them into a Wordle variant? A chess keyboard is a neccessity - I know notation pretty well, but struggle to process it quickly. After a week or two of work, I think I'm pretty close.
 
-![Game Sample](./game.png)
+![Game Screenshot](2022-06-13-14-01-39.png)
 
 ## Starting Points
 
