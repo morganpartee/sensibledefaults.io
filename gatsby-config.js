@@ -91,7 +91,7 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: false,
         // enable ip anonymization
-        anonymize: true
+        anonymize: false
       }
     },
     `gatsby-plugin-feed`,
